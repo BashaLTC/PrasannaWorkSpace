@@ -60,10 +60,15 @@ public class GenericWrappers extends Reporting implements Wrappers {
 	
 
 	
-	public void invokeApp(String browser, String url) {
+	public void invokeApp(String browser, String url, boolean headLess) {
 		// TODO Auto-generated method stub
 	try {
-		 if(browser.equalsIgnoreCase("chrome")) {
+		
+		if(headLess) {
+			System.setProperty("phantomjs.binary.path", "./drivers/phantomjs.exe");
+			driver = new PhantomJSDriver();
+		}
+		else if(browser.equalsIgnoreCase("chrome")) {
 				System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 				driver = new ChromeDriver();
 			}else if(browser.equalsIgnoreCase("firefox")) {	

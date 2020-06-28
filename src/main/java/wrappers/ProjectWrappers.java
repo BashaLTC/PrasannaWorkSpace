@@ -27,13 +27,13 @@ public class ProjectWrappers extends GenericWrappers {
 		
 		switch (app) {
 		case "IRCTC":
-			invokeApp(browserName, "https://www.irctc.co.in");
+			invokeApp(browserName, "https://www.irctc.co.in", true);
 			break;
 		case "FLIPKART":
-			invokeApp(browserName, "https://www.flipkart.com/");
+			invokeApp(browserName, "https://www.flipkart.com/", true);
 			break;
 		default:
-			invokeApp(browserName, "https://indianfrro.gov.in/frro/FormC/menuuserreg.jsp");
+			invokeApp(browserName, "https://indianfrro.gov.in/frro/FormC/menuuserreg.jsp",true);
 			break;
 		}
 	}

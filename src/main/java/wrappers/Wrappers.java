@@ -10,7 +10,7 @@ public interface Wrappers {
 	 * @throws Exception 
 	 * 
 	 */
-	public void invokeApp(String browser, String url);
+	public void invokeApp(String browser, String url, boolean headLess);
 
 	/**
 	 * This method will enter the value to the text field using id attribute to locate
